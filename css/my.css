@@ -1,0 +1,40 @@
+
+/* Player-facing typography; leave icon glyphs and code fonts intact. */
+:root:root body, :root:root h1, :root:root h2, :root:root h3, :root:root h4,
+:root:root p, :root:root a, :root:root li, :root:root td, :root:root th,
+:root:root label, :root:root input, :root:root select, :root:root textarea,
+:root:root button, :root:root small, :root:root strong {
+ font-family:"Comic Sans MS","Microsoft YaHei","PingFang SC",sans-serif!important;
+}
+:root:root pre,:root:root code,:root:root pre *,:root:root code *{font-family:Consolas,"Courier New",monospace!important}
+
+/* This file overrides the theme my.css: preserve its WeChat popover behavior. */
+.wechat-link { position: relative; display: inline-block; }
+.wechat-link .wechat-qrcode {
+ display: none;
+ position: absolute;
+ bottom: 100%;
+ left: 50%;
+ transform: translateX(-50%);
+ z-index: 1000;
+ width: 158px;
+ padding: 12px 15px 15px;
+ border-radius: 3px;
+ background: #333;
+ color: #fff;
+ font-size: 14px;
+ line-height: 1.8;
+ text-align: center;
+ white-space: nowrap;
+ box-sizing: border-box;
+ box-shadow: 0 4px 16px #0002;
+}
+.wechat-link .wechat-qrcode img {
+ display: block;
+ width: 128px;
+ height: 128px;
+ max-width: none;
+ margin: 0 auto;
+}
+.wechat-link:hover .wechat-qrcode,
+.wechat-link:focus-within .wechat-qrcode { display: block; }
